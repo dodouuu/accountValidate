@@ -22,10 +22,6 @@ router.post('/', (req, res) => {
   })
     .lean()
     .then(user => {
-      // console.log('email=', req.body.email)
-      // console.log('pass=', req.body.password)
-      // console.log('user=', user)
-      // console.log('user.len=', user.length)
       if (user.length === 0) { // 沒有找到 user
         console.log('not found')
         const needAlert = true
